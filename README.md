@@ -50,6 +50,10 @@ Aqui estão as principais telas do protótipo desenvolvido no Figma:
 | **Lista de Pacientes (5)** | **Lista de Pacientes (6)** |
 
 ---
+
+## Fluxo entre telas
+![Projeto Integrado III](https://github.com/user-attachments/assets/f7dc340b-c75a-4ca5-8983-efa46f57afde)
+
 ## Equipe 👥
 
 ### 🧑‍💻 Adão Eduardo Gomes de Oliveira
@@ -58,6 +62,7 @@ Aqui estão as principais telas do protótipo desenvolvido no Figma:
   - Criação do fluxograma das telas do MVP.
   - Pesquisa científica para justificativas de escolhas do design.
   - Criação de telas de Login e Registro.
+  - Criação do repositório do proejto.
   - Ajustes e implementações gerais ao longo do projeto.
 
 ### 🧑‍💻 Rafael Antonio Vieira Rodrigues
