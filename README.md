@@ -64,11 +64,15 @@ Aqui estão as principais telas do protótipo desenvolvido no Figma:
   - Criação de telas de Login e Registro.
   - Criação do repositório do proejto.
   - Ajustes e implementações gerais ao longo do projeto.
+ 
+    @LabIsDu
 
 ### 🧑‍💻 Rafael Antonio Vieira Rodrigues
 - **Funções:**
   - Responsável pela criação das telas no Figma.
   - Organização da equipe como mediador.
   - União das partes envolvidas para entrega do Protótipo Preliminar de Alta Fidelidade.
+ 
+    @raffaelvieir
 
 ---
