@@ -1,0 +1,279 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; 
+    color: #333;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Barra lateral */
+.sidebar {
+    width: 250px;
+    background-color: #167EE6;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.voltar {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: left;
+}
+
+.btn-voltar {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.btn-voltar i {
+    margin-right: 10px;
+}
+
+.btn-voltar:hover {
+    text-decoration: underline;
+}
+
+.user-info {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.user-info p {
+    margin: 5px 0;
+    word-wrap: break-word; /* Quebra o texto */
+    overflow-wrap: break-word;
+    width: 100%; /* Para não sobrepor a barra lateral */
+}
+
+.menu-lateral ul {
+    list-style: none;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.menu-lateral ul li {
+    margin: 15px 0;
+}
+
+.menu-lateral ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-lateral ul li a i {
+    margin-right: 10px;
+}
+
+/* Barra superior */
+.top-bar {
+    width: 100%;
+    background-color: #167EE6; 
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.search-bar i {
+    color: #167EE6;
+    margin-right: 10px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 200px;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff; 
+}
+
+/* Formulário de cadastro */
+.form-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    font-size: 24px;
+    color: #167EE6;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #167EE6;
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: #167EE6;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #125bb5;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    .user-info p {
+        font-size: 14px;
+    }
+
+    .menu-lateral ul li a {
+        font-size: 14px;
+    }
+
+    .top-bar {
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+
+    .form-container {
+        padding: 15px;
+    }
+
+    .form-container h2 {
+        font-size: 20px;
+    }
+
+    .form-group input,
+    .form-group select {
+        font-size: 12px;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        padding: 5px;
+    }
+
+    .logo h1 {
+        font-size: 18px;
+    }
+
+    .user-info p {
+        font-size: 12px;
+    }
+
+    .menu-lateral ul li a {
+        font-size: 12px;
+    }
+
+    .form-container {
+        padding: 10px;
+    }
+
+    .form-container h2 {
+        font-size: 18px;
+    }
+
+    .form-group input,
+    .form-group select {
+        font-size: 10px;
+    }
+
+    button[type="submit"] {
+        font-size: 12px;
+    }
+}
