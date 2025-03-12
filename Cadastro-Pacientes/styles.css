@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -149,6 +148,7 @@ body {
 
 .form-group {
     margin-bottom: 15px;
+    position: relative; 
 }
 
 .form-group label {
@@ -165,12 +165,43 @@ body {
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 14px;
+    transition: border-color 0.3s ease;
 }
 
 .form-group input:focus,
 .form-group select:focus {
     border-color: #167EE6;
     outline: none;
+}
+
+/* Estilo para campos inválidos */
+.form-group input.invalid,
+.form-group select.invalid {
+    border-color: #ff4d4d;
+    padding-right: 35px; 
+}
+
+/* Ícone de erro para campos inválidos */
+.form-group .error-icon {
+    position: absolute;
+    right: 10px;
+    top: 35px;
+    color: #ff4d4d;
+    font-size: 16px;
+    display: none;
+}
+
+.form-group input.invalid + .error-icon,
+.form-group select.invalid + .error-icon {
+    display: block;
+}
+
+/* Mensagem de erro */
+.error-message {
+    color: #ff4d4d;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
 }
 
 button[type="submit"] {
@@ -182,6 +213,7 @@ button[type="submit"] {
     font-size: 16px;
     cursor: pointer;
     width: 100%;
+    transition: background-color 0.3s ease;
 }
 
 button[type="submit"]:hover {

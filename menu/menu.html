@@ -15,14 +15,14 @@
                 <h1>Odonto Agende</h1>
             </div>
             <div class="user-info">
-                <p>Eduardo</p>
-                <p>eduardo.gomes@aluno.ufca.edu.br</p>
+                <p id="nome-usuario">Eduardo</p>
+                <p id="email-usuario">eduardo.gomes@aluno.ufca.edu.br</p>
             </div>
             <nav class="menu-lateral">
                 <ul>
-                    <li><a href="#"><i class="fas fa-user-edit"></i> Editar perfil</a></li>
+                    <li><a href="../Dashboard/index.html"><i class="fas fa-user-edit"></i> Editar perfil</a></li>
                     <li><a href="#"><i class="fas fa-cog"></i> Ajustes</a></li>
-                    <li><a href="#"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+                    <li><a href="#sair"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
                 </ul>
             </nav>
         </aside>
@@ -41,7 +41,7 @@
                     <i class="fas fa-calendar-alt"></i>
                     <h2>Agenda</h2>
                 </div>
-                <div class="menu-bloco">
+                <div class="menu-bloco" id="pacientes">
                     <i class="fas fa-user-injured"></i>
                     <h2>Pacientes</h2>
                 </div>
@@ -64,5 +64,7 @@
             </div>
         </main>
     </div>
+
+    <script src="script-menu.js"></script>
 </body>
 </html>
