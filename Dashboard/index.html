@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - Odonto Agende</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Barra lateral -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>Odonto Agende</h1>
+            </div>
+            <div class="user-info">
+                <p id="nome-usuario">Eduardo</p>
+            </div>
+            <nav class="menu-lateral">
+                <ul>
+                    <li><a href="../Menu/index.html"><i class="fas fa-home"></i> Menu</a></li>
+                    <li><a href="../Dashboard/dashboard.html" class="active"><i class="fas fa-user-edit"></i> Editar Perfil</a></li>
+                    <li><a href="#sair"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <!-- Barra superior -->
+            <header class="top-bar">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Pesquisar...">
+                </div>
+            </header>
+
+            <!-- Conteúdo do Dashboard -->
+            <div class="dashboard-container">
+                <h2>Editar Perfil</h2>
+                <form id="form-editar-perfil">
+                    <div class="input-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="text" id="telefone" required placeholder="(xx) xxxxx-xxxx" data-inputmask="'mask': '(99) 99999-9999'">
+                    </div>
+                    <div class="input-group">
+                        <label for="data-nascimento">Data de Nascimento</label>
+                        <input type="date" id="data-nascimento" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="genero">Gênero</label>
+                        <select id="genero" required>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    <button type="submit">Salvar Alterações</button>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
