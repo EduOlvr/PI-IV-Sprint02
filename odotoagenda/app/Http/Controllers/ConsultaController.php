@@ -3,49 +3,63 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Consulta; // Certifique-se de que essa linha existe!
-
+use App\Models\Consulta;
+use App\Models\Paciente;
 
 class ConsultaController extends Controller
 {
     public function create()
     {
-        return view('agendar');
+        // Buscar todos os pacientes cadastrados
+        $pacientes = Paciente::all();
+        return view('agendar', compact('pacientes'));
     }
 
     public function store(Request $request)
     {
-        // Validação dos dados
+        
+    
         $request->validate([
-            'nome' => 'required|string|max:255',
-            'data' => 'required|date',
-            'hora' => 'required'
+            'paciente_id' => 'required|exists:pacientes,id',
+            'data_consulta' => 'required|date',
+            'hora_consulta' => 'required|date_format:H:i',
         ]);
-
-        // Criar nova consulta no banco de dados
+    
         Consulta::create([
-            'nome' => $request->nome,
-            'data' => $request->data,
-            'hora' => $request->hora
+            'paciente_id' => $request->paciente_id,
+            'data' => $request->data_consulta,
+            'hora' => $request->hora_consulta,
         ]);
-
+    
         return redirect('/')->with('success', 'Consulta agendada com sucesso!');
     }
+    
 
-    public function destroy($id)
+
+    // Rota para retornar os dados do paciente via AJAX
+    public function getPaciente($id)
     {
-        $consulta = Consulta::findOrFail($id);
-        $consulta->delete();
-        
-        return redirect('/consultas')->with('success', 'Consulta excluída com sucesso!');
-
+        $paciente = Paciente::findOrFail($id);
+        return response()->json($paciente);
     }
     public function index()
-    {
-        // Busca todas as consultas ordenadas por data e hora
-        $consultas = Consulta::orderBy('data', 'asc')->orderBy('hora', 'asc')->get();
+{
+    $consultas = Consulta::with('paciente')->get(); // Carrega as consultas com os pacientes
+    $totalConsultas = Consulta::count();
+    $pacientes = Paciente::all();
 
-        // Retorna a view 'consultas' e envia os dados
-        return view('consultas', compact('consultas'));
+    return view('dashboard', compact('consultas', 'totalConsultas', 'pacientes'));
+}
+public function buscarPaciente($cpf) // buscar o paciente pelo CPF
+{
+    $paciente = Paciente::where('cpf', $cpf)->first();
+
+    if ($paciente) {
+        return response()->json($paciente);
+    } else {
+        return response()->json(null, 404);
     }
+}
+
+
 }

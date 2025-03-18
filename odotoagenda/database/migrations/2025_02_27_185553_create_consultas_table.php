@@ -10,16 +10,17 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up()
-{
-    Schema::create('consultas', function (Blueprint $table) {
-        $table->id();
-        $table->string('nome');  // Verifique se a coluna 'nome' está aqui
-        $table->date('data');
-        $table->time('hora');
-        $table->timestamps();
-    });
-}
-
+    {
+        Schema::create('consultas', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('paciente_id') // Chave estrangeira para pacientes
+                ->constrained('pacientes')
+                ->onDelete('cascade'); // Remove consultas se o paciente for deletado
+            $table->date('data');
+            $table->time('hora');
+            $table->timestamps();
+        });
+    }
 
     /**
      * Reverse the migrations.

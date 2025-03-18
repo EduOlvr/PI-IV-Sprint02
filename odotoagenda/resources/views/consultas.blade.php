@@ -20,7 +20,7 @@
                 <h3>Consultas Agendadas</h3>
             </div>
             <div class="card-body">
-                @if ($consultas->isEmpty())
+                @if ($consultas->isEmpty()) 
                     <p class="text-center">Nenhuma consulta agendada.</p>
                 @else
                     <table class="table table-bordered">
@@ -37,7 +37,7 @@
                             @foreach ($consultas as $consulta)
                                 <tr>
                                     <td>{{ $consulta->id }}</td>
-                                    <td>{{ $consulta->nome }}</td>
+                                    <td>{{ $consulta->paciente->nome ?? 'Paciente não encontrado' }}</td>
                                     <td>{{ date('d/m/Y', strtotime($consulta->data)) }}</td>
                                     <td>{{ $consulta->hora }}</td>
                                     <td>

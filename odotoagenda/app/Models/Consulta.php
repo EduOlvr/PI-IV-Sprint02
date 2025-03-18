@@ -9,5 +9,12 @@ class Consulta extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nome', 'data', 'hora']; // Permite preencher esses campos
+    protected $fillable = ['paciente_id', 'data', 'hora'];
+
+
+    // Relação com Paciente
+    public function paciente()
+    {
+        return $this->belongsTo(Paciente::class, 'paciente_id');
+    }
 }
