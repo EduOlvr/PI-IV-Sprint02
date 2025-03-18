@@ -41,7 +41,11 @@
                                     <td>{{ date('d/m/Y', strtotime($consulta->data)) }}</td>
                                     <td>{{ $consulta->hora }}</td>
                                     <td>
-                                        <form action="{{ url('/consultas/' . $consulta->id) }}" method="POST">
+                                        <!-- Botão para Editar -->
+                                        <a href="{{ route('consultas.edit', $consulta->id) }}" class="btn btn-warning btn-sm">Editar</a>
+
+                                        <!-- Botão para Excluir -->
+                                        <form action="{{ url('/consultas/' . $consulta->id) }}" method="POST" style="display:inline;">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger btn-sm">Excluir</button>

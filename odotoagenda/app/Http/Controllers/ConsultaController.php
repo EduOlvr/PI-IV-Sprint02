@@ -42,14 +42,12 @@ class ConsultaController extends Controller
         $paciente = Paciente::findOrFail($id);
         return response()->json($paciente);
     }
-    public function index()
+    public function index() 
 {
-    $consultas = Consulta::with('paciente')->get(); // Carrega as consultas com os pacientes
-    $totalConsultas = Consulta::count();
-    $pacientes = Paciente::all();
-
-    return view('dashboard', compact('consultas', 'totalConsultas', 'pacientes'));
+    $consultas = Consulta::with('paciente')->get();
+    return view('consultas', compact('consultas')); 
 }
+
 public function buscarPaciente($cpf) // buscar o paciente pelo CPF
 {
     $paciente = Paciente::where('cpf', $cpf)->first();
@@ -59,6 +57,27 @@ public function buscarPaciente($cpf) // buscar o paciente pelo CPF
     } else {
         return response()->json(null, 404);
     }
+}
+public function edit($id)
+{
+    $consulta = Consulta::findOrFail($id);
+    return view('consultas.edit', compact('consulta'));
+}
+public function update(Request $request, $id)
+{
+    $consulta = Consulta::findOrFail($id);
+
+    $request->validate([
+        'data' => 'required|date',
+        'hora' => 'required',
+    ]);
+
+    $consulta->update([
+        'data' => $request->data,
+        'hora' => $request->hora,
+    ]);
+
+    return redirect()->route('consultas.index')->with('success', 'Consulta atualizada com sucesso!');
 }
 
 

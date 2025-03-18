@@ -45,3 +45,9 @@ Route::get('/buscar-paciente/{cpf}', [ConsultaController::class, 'buscarPaciente
 
 // Buscar paciente pelo CPF
 Route::get('/buscar-paciente/{cpf}', [PacienteController::class, 'buscarPorCpf']);
+
+
+Route::get('/consultas', [ConsultaController::class, 'index'])->name('consultas.index');
+
+Route::get('/consultas/{id}/edit', [ConsultaController::class, 'edit'])->name('consultas.edit');
+Route::put('/consultas/{id}', [ConsultaController::class, 'update'])->name('consultas.update');
