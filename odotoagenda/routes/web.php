@@ -51,3 +51,5 @@ Route::get('/consultas', [ConsultaController::class, 'index'])->name('consultas.
 
 Route::get('/consultas/{id}/edit', [ConsultaController::class, 'edit'])->name('consultas.edit');
 Route::put('/consultas/{id}', [ConsultaController::class, 'update'])->name('consultas.update');
+
+

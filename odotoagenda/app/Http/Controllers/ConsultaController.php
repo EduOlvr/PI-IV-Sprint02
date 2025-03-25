@@ -79,6 +79,21 @@ public function update(Request $request, $id)
 
     return redirect()->route('consultas.index')->with('success', 'Consulta atualizada com sucesso!');
 }
+public function destroy($id)
+{
+    // Encontre a consulta no banco de dados
+    $consulta = Consulta::find($id);
+
+    // Verifique se a consulta existe
+    if (!$consulta) {
+        return redirect()->route('consultas.index')->with('error', 'Consulta não encontrada.');
+    }
+
+    // Exclui a consulta
+    $consulta->delete();
+
+    return redirect()->route('consultas.index')->with('success', 'Consulta excluída com sucesso.');
+}
 
 
 }

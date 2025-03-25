@@ -56,37 +56,47 @@ class PacienteController extends Controller
 
     // Método para editar ficha de paciente 
     public function edit($id)
-    {
-        $paciente = Paciente::findOrFail($id); // Busca o paciente pelo ID
-        return view('pacientes.edit', compact('paciente')); // Retorna a view de edição com os dados do paciente
+{
+    $paciente = Paciente::find($id);
+
+    if (!$paciente) {
+        return redirect()->route('pacientes.index')->with('error', 'Paciente não encontrado.');
     }
+
+    return view('pacientes.edit', compact('paciente'));
+}
 
     // Método para atualizar os dados do paciente
     public function update(Request $request, $id)
-    {
-        // Validação dos dados antes da atualização
-        $request->validate([
-            'nome' => 'required|string|max:255',
-            'cpf' => 'required|string|max:14',
-            'data_nascimento' => 'required|date',
-            'genero' => 'required|string',
-            'telefone' => 'required|string|max:15',
-            'email' => 'required|string|email|max:255',
-            'cep' => 'required|string|max:9',
-            'logradouro' => 'required|string|max:255',
-            'numero' => 'required|string|max:10',
-            'complemento' => 'nullable|string|max:255',
-            'bairro' => 'required|string|max:255',
-            'cidade' => 'required|string|max:255',
-            'estado' => 'required|string|max:2',
-        ]);
+{
+    // Validação dos dados
+    $request->validate([
+        'nome' => 'required|string|max:255',
+        'cpf' => 'required|string|max:14',
+        'data_nascimento' => 'required|date',
+        'genero' => 'required|string',
+        'telefone' => 'required|string|max:15',
+        'email' => 'required|string|email|max:255',
+        'cep' => 'required|string|max:9',
+        'logradouro' => 'required|string|max:255',
+        'numero' => 'required|string|max:10',
+        'complemento' => 'nullable|string|max:255',
+        'bairro' => 'required|string|max:255',
+        'cidade' => 'required|string|max:255',
+        'estado' => 'required|string|max:2',
+    ]);
+// Busca o paciente no banco de dados
+    $paciente = Paciente::find($id);
 
-        // Busca o paciente pelo ID e atualiza os dados
-        $paciente = Paciente::findOrFail($id);
-        $paciente->update($request->all());
-
-        return redirect()->route('pacientes.index')->with('success', 'Paciente atualizado com sucesso!');
+    if (!$paciente) {
+        return redirect()->route('pacientes.index')->with('error', 'Paciente não encontrado.');
     }
+
+    // Atualiza os dados do paciente
+    $paciente->update($request->all());
+
+    return redirect()->route('pacientes.index')->with('success', 'Paciente atualizado com sucesso.');
+}
 
     // Método para excluir um paciente
     public function destroy($id)
