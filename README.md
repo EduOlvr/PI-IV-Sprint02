@@ -6,7 +6,7 @@ Este projeto consiste no desenvolvimento de um **MVP (Minimum Viable Product)** 
 
 ---
 
-## Funcionalidades Principais 🚀
+## Funcionalidades Principais
 
 - **Login e Cadastro:** Autenticação segura para pacientes e profissionais de saúde.
 - **Agendamento de Consultas:** Interface intuitiva para marcar consultas com base na disponibilidade dos dentistas.
@@ -17,7 +17,7 @@ Este projeto consiste no desenvolvimento de um **MVP (Minimum Viable Product)** 
 
 ---
 
-## Telas Desenvolvidas 🖥️
+## Telas Desenvolvidas
 
 Aqui estão as principais telas do protótipo desenvolvido no Figma:
 
@@ -73,9 +73,9 @@ Abaixo estão as tecnologias e ferramentas utilizadas no desenvolvimento deste p
 - ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)  
   Para hospedagem do repositório.
 
-## Equipe 👥
+## Equipe
 
-### 🧑‍💻 Adão Eduardo Gomes de Oliveira
+### Adão Eduardo Gomes de Oliveira
 - **Funções:**
   - Responsável pelo documento de entrega.
   - Criação do fluxograma das telas do MVP.
@@ -84,14 +84,14 @@ Abaixo estão as tecnologias e ferramentas utilizadas no desenvolvimento deste p
   - Criação do repositório do proejto.
   - Ajustes e implementações gerais ao longo do projeto.
  
-  [LabIsDu](https://github.com/LabIsDu)
+[LabIsDu](https://github.com/LabIsDu)
 
-### 🧑‍💻 Rafael Antonio Vieira Rodrigues
+### Rafael Antonio Vieira Rodrigues
 - **Funções:**
   - Responsável pela criação das telas no Figma.
   - Organização da equipe como mediador.
   - União das partes envolvidas para entrega do Protótipo Preliminar de Alta Fidelidade.
- 
- [raffaelvieir](https://github.com/raffaelvieir)
+
+[raffaelvieir](https://github.com/raffaelvieir)
 
 ---
