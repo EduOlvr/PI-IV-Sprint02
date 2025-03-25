@@ -54,6 +54,25 @@ Aqui estão as principais telas do protótipo desenvolvido no Figma:
 ## Fluxo entre telas
 ![Projeto Integrado III](https://github.com/user-attachments/assets/f7dc340b-c75a-4ca5-8983-efa46f57afde)
 
+## Tecnologias Utilizadas
+
+Abaixo estão as tecnologias e ferramentas utilizadas no desenvolvimento deste projeto:
+
+- ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)  
+  Para a estruturação e semântica das páginas web.
+
+- ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)  
+  Para a estilização e design responsivo, garantindo uma boa experiência em dispositivos móveis e desktop.
+
+- ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)  
+  Para o desenvolvimento da lógica de interação, processamento de formulários e integração com banco de dados.
+
+- ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)  
+  Para versionamento do código.
+
+- ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)  
+  Para hospedagem do repositório.
+
 ## Equipe 👥
 
 ### 🧑‍💻 Adão Eduardo Gomes de Oliveira
@@ -65,7 +84,7 @@ Aqui estão as principais telas do protótipo desenvolvido no Figma:
   - Criação do repositório do proejto.
   - Ajustes e implementações gerais ao longo do projeto.
  
-    @LabIsDu
+  [LabIsDu](https://github.com/LabIsDu)
 
 ### 🧑‍💻 Rafael Antonio Vieira Rodrigues
 - **Funções:**
@@ -73,6 +92,6 @@ Aqui estão as principais telas do protótipo desenvolvido no Figma:
   - Organização da equipe como mediador.
   - União das partes envolvidas para entrega do Protótipo Preliminar de Alta Fidelidade.
  
-    @raffaelvieir
+ [raffaelvieir](https://github.com/raffaelvieir)
 
 ---
