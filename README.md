@@ -50,6 +50,8 @@ Este projeto consiste no desenvolvimento de um **MVP (Minimum Viable Product)** 
 ## Fluxo entre telas
 ![Projeto Integrado III](https://github.com/user-attachments/assets/f7dc340b-c75a-4ca5-8983-efa46f57afde)
 
+
+# Implementação
 ## Tecnologias Utilizadas
 
 Abaixo estão as tecnologias e ferramentas utilizadas no desenvolvimento deste projeto:
@@ -68,6 +70,7 @@ Abaixo estão as tecnologias e ferramentas utilizadas no desenvolvimento deste p
 
 - ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)  
   Para hospedagem do repositório.
+
 
 ## Equipe
 
