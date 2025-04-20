@@ -6,11 +6,17 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PacienteController;
 use App\Http\Controllers\AuthController;
 
-// 🔓 Rotas públicas (sem autenticação)
-Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
-Route::post('/login', [AuthController::class, 'login']);
+// Rotas públicas de autenticação
+Route::get('/login',    [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login',   [AuthController::class, 'login']);
 
-// 🔒 Grupo de rotas protegidas por autenticação
+Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
+Route::post('/register',[AuthController::class, 'register']);
+
+// Rota de logout (já no grupo auth)
+Route::middleware('auth')->post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+// Grupo de rotas protegidas por autenticação
 Route::middleware(['auth'])->group(function () {
 
     // Logout

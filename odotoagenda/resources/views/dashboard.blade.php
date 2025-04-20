@@ -116,6 +116,11 @@
   {{-- Sidebar --}}
   <nav class="sidebar">
     <h3>🩺 Painel Médico</h3>
+    @auth
+    <p class="text-center mb-4">
+      Olá, <strong>{{ auth()->user()->name }}</strong>!
+    </p>
+  @endauth
     <ul class="nav flex-column mb-3">
       <li class="nav-item">
         <a href="{{ route('dashboard') }}"
