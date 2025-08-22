@@ -1,22 +1,3 @@
-# Projeto Integrado III - Clínica Odontológica 🦷
-
-Repositório destinado aos entregáveis da disciplina de **Projeto Integrado III** do curso de Análise e Desenvolvimento de Sistemas (ADS) do Centro de Educação a Distância (CEAD).  
-
-Este projeto consiste no desenvolvimento de um **MVP (Minimum Viable Product)** para uma clínica odontológica, com foco em funcionalidades como agendamento de consultas, gestão de pacientes e profissionais, e integração de pagamentos online.
-
----
-
-## Funcionalidades Principais
-
-- **Login e Cadastro:** Autenticação segura para pacientes e profissionais de saúde.
-- **Agendamento de Consultas:** Interface intuitiva para marcar consultas com base na disponibilidade dos dentistas.
-- **Gestão de Pacientes e Dentistas:** Cadastro e visualização de informações detalhadas.
-- **Histórico Clínico:** Acesso ao histórico de consultas, tratamentos e prescrições.
-- **Chat Integrado:** Comunicação direta entre pacientes e dentistas.
-- **Avaliações e Feedbacks:** Sistema de avaliação para pacientes avaliarem os serviços.
-
----
-
 ## Telas Desenvolvidas
 
 | <img src="https://github.com/user-attachments/assets/27d54229-c76b-4bb5-88fe-b78b0efa400e" width="450"> | <img src="https://github.com/user-attachments/assets/fa29840b-437c-4882-a4a0-68e485cd0911" width="450"> |
@@ -51,27 +32,6 @@ Este projeto consiste no desenvolvimento de um **MVP (Minimum Viable Product)** 
 ![Projeto Integrado III](https://github.com/user-attachments/assets/f7dc340b-c75a-4ca5-8983-efa46f57afde)
 
 
-# Implementação
-## Tecnologias Utilizadas
-
-Abaixo estão as tecnologias e ferramentas utilizadas no desenvolvimento deste projeto:
-
-- ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)  
-  Para a estruturação e semântica das páginas web.
-
-- ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)  
-  Para a estilização e design responsivo, garantindo uma boa experiência em dispositivos móveis e desktop.
-
-- ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)  
-  Para o desenvolvimento da lógica de interação, processamento de formulários e integração com banco de dados.
-
-- ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)  
-  Para versionamento do código.
-
-- ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)  
-  Para hospedagem do repositório.
-
-
 ## Equipe
 
 ### Adão Eduardo Gomes de Oliveira
@@ -83,7 +43,7 @@ Abaixo estão as tecnologias e ferramentas utilizadas no desenvolvimento deste p
   - Criação do repositório do proejto.
   - Ajustes e implementações gerais ao longo do projeto.
  
-[LabIsDu](https://github.com/LabIsDu)
+[EduOlvr](https://github.com/EduOlvr)
 
 ### Rafael Antonio Vieira Rodrigues
 - **Funções:**
