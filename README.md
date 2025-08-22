@@ -1,55 +1,78 @@
-## Telas Desenvolvidas
+# Projeto Integrado IV - Sprint 02 (API RESTful )
 
-| <img src="https://github.com/user-attachments/assets/27d54229-c76b-4bb5-88fe-b78b0efa400e" width="450"> | <img src="https://github.com/user-attachments/assets/fa29840b-437c-4882-a4a0-68e485cd0911" width="450"> |
-|:---:|:---:|
-| **Tela de Login** | **Tela de Registro** |
+Este projeto consiste na criação de uma API RESTful para um sistema de gestão de pacientes. A API é a fundação do sistema, responsável por manipular e servir os dados dos pacientes.
 
-| <img src="https://github.com/user-attachments/assets/5315b4ca-5c7e-4c73-b2ec-42d6e87500fd" width="450"> | <img src="https://github.com/user-attachments/assets/e6dc9974-9c38-480a-8713-09b8aa6551ea" width="450"> |
-|:---:|:---:|
-| **Menu Principal** | **Lista de Agendamentos** |
+Este entregável (EP2) foca na criação e documentação da API funcional, que servirá de base para futuras integrações com a interface do usuário (front-end).
 
-| <img src="https://github.com/user-attachments/assets/3fbd89a4-bc79-49a1-af0c-39757cc6d324" width="450"> | <img src="https://github.com/user-attachments/assets/77051641-03a6-44ad-befe-5ec4f52cc431" width="450"> |
-|:---:|:---:|
-| **Tela de Agendamento** | **Lista de Pacientes** |
+## Como Executar a API Localmente
 
-| <img src="https://github.com/user-attachments/assets/147f6b11-d461-48e3-bd9f-8706ed0a04ba" width="450"> | <img src="https://github.com/user-attachments/assets/bcc2ec40-60d0-4dc3-a7a0-7e9379978881" width="450"> |
-|:---:|:---:|
-| **Lista de Dentistas** | **Lista de Dentistas (2)** |
+Para testar a API, siga os passos abaixo.
 
-| <img src="https://github.com/user-attachments/assets/acc17fb9-bcd1-4bf3-af22-bbd840830ab8" width="450"> | <img src="https://github.com/user-attachments/assets/a91b56e2-3f03-4128-8005-7768c8a95031" width="450"> |
-|:---:|:---:|
-| **Lista de Dentistas (3)** | **Lista de Pacientes (2)** |
+### Pré-requisitos
 
-| <img src="https://github.com/user-attachments/assets/74610bd0-9e54-4ae2-8442-156db1552d03" width="450"> | <img src="https://github.com/user-attachments/assets/259e23dd-e904-4915-bbbf-503203264203" width="450"> |
-|:---:|:---:|
-| **Lista de Pacientes (3)** | **Lista de Pacientes (4)** |
+- [Node.js](https://nodejs.org/) (versão 18 ou superior)
+- [npm](https://www.npmjs.com/) (instalado junto com o Node.js)
+- Uma ferramenta de teste de API como o [Postman](https://www.postman.com/) ou [Insomnia](https://insomnia.rest/).
 
-| <img src="https://github.com/user-attachments/assets/a59490a4-a852-4463-befe-c9949b1c2ecc" width="450"> | <img src="https://github.com/user-attachments/assets/24af39e2-cced-4441-9d5c-502a90162156" width="450"> |
-|:---:|:---:|
-| **Lista de Pacientes (5)** | **Lista de Pacientes (6)** |
+### Instruções de Execução
 
-## Fluxo entre telas
-![Projeto Integrado III](https://github.com/user-attachments/assets/f7dc340b-c75a-4ca5-8983-efa46f57afde)
+1.  Clone o repositório para a sua máquina.
+
+2.  Navegue até a pasta da API através do terminal:
+    ```bash
+    cd api
+    ```
+
+3.  Instale as dependências necessárias:
+    ```bash
+    npm install
+    ```
+
+4.  Inicie o servidor da API:
+    ```bash
+    node index.js
+    ```
+
+5.  O servidor estará rodando e pronto para receber requisições em `http://localhost:3000`.
+
+## Documentação e Exemplos de Teste
+
+A documentação completa das rotas, com detalhes sobre os endpoints, métodos, parâmetros e exemplos de resposta, pode ser encontrada no arquivo: **[DOCUMENTACAO_API.md](DOCUMENTACAO_API.md)**.
+
+### Exemplo Rápido: Cadastrar um novo paciente via Postman
+
+1.  **Método:** `POST`
+2.  **URL:** `http://localhost:3000/pacientes`
+3.  **Body:** Vá para a aba `Body`, selecione `raw` e `JSON`. Cole o seguinte:
+    ```json
+    {
+      "nome": "José Alves",
+      "cpf": "321.654.987-00",
+      "dataNascimento": "1988-07-10"
+    }
+    ```
+4.  Clique em **Send**. A resposta deverá ser um status `201 Created` com os dados do paciente criado.
+
+---
+
+## [Componente Extensionista] Possíveis usos da nossa API
+
+Uma API como esta, que centraliza e expõe dados de pacientes de forma estruturada, é a espinha dorsal de qualquer sistema de saúde moderno. Ela resolve problemas reais e abre portas para diversas inovações:
+
+1.  **Sistema de Gestão para Clínicas de Pequeno Porte:** Uma clínica ou consultório particular poderia usar esta API para alimentar seu próprio sistema de agendamento e prontuário eletrônico. A interface web (as telas HTML/CSS já existentes) seria conectada a esta API para registrar pacientes, marcar consultas e visualizar históricos, substituindo processos manuais e planilhas, reduzindo erros e otimizando o tempo da equipe.
+
+2.  **Portal do Paciente:** A API poderia ser consumida por um aplicativo de celular ou um portal web onde os próprios pacientes poderiam acessar seus dados, ver seu histórico de consultas, agendar novos horários e receber lembretes. Isso empodera o paciente, melhora a comunicação e reduz a carga de trabalho da recepção da clínica.
+
+3.  **Integração com Outros Serviços de Saúde:** Um negócio que queira se expandir poderia usar a API para se conectar a laboratórios (para receber resultados de exames diretamente no prontuário do paciente), farmácias (para enviar receitas digitais) ou até mesmo plataformas de telemedicina, criando um ecossistema de saúde conectado e eficiente.
 
 
 ## Equipe
 
 ### Adão Eduardo Gomes de Oliveira
-- **Funções:**
-  - Responsável pelo documento de entrega.
-  - Criação do fluxograma das telas do MVP.
-  - Pesquisa científica para justificativas de escolhas do design.
-  - Criação de telas de Login e Registro.
-  - Criação do repositório do proejto.
-  - Ajustes e implementações gerais ao longo do projeto.
- 
+
 [EduOlvr](https://github.com/EduOlvr)
 
 ### Rafael Antonio Vieira Rodrigues
-- **Funções:**
-  - Responsável pela criação das telas no Figma.
-  - Organização da equipe como mediador.
-  - União das partes envolvidas para entrega do Protótipo Preliminar de Alta Fidelidade.
 
 [raffaelvieir](https://github.com/raffaelvieir)
 
