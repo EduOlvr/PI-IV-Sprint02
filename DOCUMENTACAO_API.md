@@ -1,54 +1,101 @@
+````markdown
 # Documentação da API - Gestão de Pacientes
-
-Esta documentação descreve as rotas disponíveis na API do projeto PI-IV-Sprint02, responsável por gerenciar os dados de pacientes de uma clínica.
 
 **URL Base da API:** `http://localhost:3000`
 
 ---
 
-## Recurso: Pacientes (`/pacientes`)
-
-Este recurso representa os pacientes da clínica e permite a consulta e criação de novos registros.
+## Recurso: Pacientes (/pacientes)
 
 ### 1. Listar todos os Pacientes
 
-- **Método:** `GET`
-- **Endpoint:** `/pacientes`
-- **Descrição:** Retorna uma lista em formato JSON com todos os pacientes cadastrados no sistema.
-- **Resposta de Sucesso (Código 200 OK):**
-  ```json
-  [
-    {
-      "id": 1,
-      "nome": "Carlos Silva",
-      "cpf": "111.222.333-44",
-      "dataNascimento": "1990-05-15"
-    },
-    {
-      "id": 2,
-      "nome": "Maria Oliveira",
-      "cpf": "555.666.777-88",
-      "dataNascimento": "1985-10-20"
-    }
-  ]
+```http
+GET /pacientes
+````
 
-2. Buscar Paciente por ID
+```json
+[
+  {
+    "id": 1,
+    "nome": "Carlos Silva",
+    "cpf": "111.222.333-44",
+    "dataNascimento": "1990-05-15"
+  },
+  {
+    "id": 2,
+    "nome": "Maria Oliveira",
+    "cpf": "555.666.777-88",
+    "dataNascimento": "1985-10-20"
+  }
+]
+```
 
-    Método: GET
+### 2. Buscar Paciente por ID
 
-    Endpoint: /pacientes/:id
+```http
+GET /pacientes/:id
+```
 
-    Parâmetros de URL:
+```json
+{
+  "id": "Obrigatório | Integer"
+}
+```
 
-        id (Obrigatório | Integer): O ID único do paciente a ser buscado.
+```http
+Exemplo de Requisição:
+GET http://localhost:3000/pacientes/1
+```
 
-    Exemplo de Requisição: GET http://localhost:3000/pacientes/1
-
-    Resposta de Sucesso (Código 200 OK):
-
+```json
+Resposta 200 OK:
 {
   "id": 1,
   "nome": "Carlos Silva",
   "cpf": "111.222.333-44",
   "dataNascimento": "1990-05-15"
 }
+```
+
+```json
+Resposta 404 Not Found:
+{
+  "message": "Paciente não encontrado."
+}
+```
+
+### 3. Cadastrar Novo Paciente
+
+```http
+POST /pacientes
+```
+
+```json
+Corpo da Requisição:
+{
+  "nome": "Joana Mendes da Silva",
+  "cpf": "123.456.789-00",
+  "dataNascimento": "1995-11-22"
+}
+```
+
+```json
+Resposta 201 Created:
+{
+  "message": "Paciente cadastrado com sucesso!",
+  "paciente": {
+    "id": 3,
+    "nome": "Joana Mendes da Silva",
+    "cpf": "123.456.789-00",
+    "dataNascimento": "1995-11-22"
+  }
+}
+```
+
+```json
+Resposta 400 Bad Request:
+{
+  "message": "Dados incompletos. Nome, CPF e data de nascimento são obrigatórios."
+}
+
+
