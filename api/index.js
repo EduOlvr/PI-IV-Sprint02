@@ -1,8 +1,8 @@
-// Importa os pacotes que acabamos de instalar
+// Importa os pacotes 
 const express = require('express');
 const cors = require('cors');
 
-// Inicia o aplicativo Express
+// Inicia o Express
 const app = express();
 
 // Define a porta em que o servidor vai rodar
