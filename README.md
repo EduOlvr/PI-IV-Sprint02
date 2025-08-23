@@ -8,11 +8,12 @@ Este entregável (EP2) foca na criação e documentação da API funcional, que 
 
 Para testar a API, siga os passos abaixo.
 
-### Pré-requisitos
+### 🔧 Pré-requisitos
 
-- [Node.js](https://nodejs.org/) (versão 18 ou superior)
-- [npm](https://www.npmjs.com/) (instalado junto com o Node.js)
-- Uma ferramenta de teste de API como o [Postman](https://www.postman.com/) ou [Insomnia](https://insomnia.rest/).
+- <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js" width="20"/> [Node.js](https://nodejs.org/) (versão 18 ou superior)  
+- <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg" alt="npm" width="20"/> [npm](https://www.npmjs.com/) (instalado junto com o Node.js)  
+- <img src="https://raw.githubusercontent.com/get-icon/geticon/master/icons/postman.svg" alt="Postman" width="20"/> [Postman](https://www.postman.com/) ou <img src="https://raw.githubusercontent.com/get-icon/geticon/master/icons/insomnia.svg" alt="Insomnia" width="20"/> [Insomnia](https://insomnia.rest/)  
+
 
 ### Instruções de Execução
 
