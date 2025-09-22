@@ -1,4 +1,4 @@
-# Projeto Integrado IV - Sprint 02 (API RESTful )
+# Projeto Integrado IV - Sprint 02 (API RESTful ) - Sprint 03 (Relatório de testes de software)
 
 Este projeto consiste na criação de uma API RESTful para um sistema de gestão de pacientes. A API é a fundação do sistema, responsável por manipular e servir os dados dos pacientes.
 
@@ -66,6 +66,10 @@ Uma API como esta, que centraliza e expõe dados de pacientes de forma estrutura
 
 3.  **Integração com Outros Serviços de Saúde:** Um negócio que queira se expandir poderia usar a API para se conectar a laboratórios (para receber resultados de exames diretamente no prontuário do paciente), farmácias (para enviar receitas digitais) ou até mesmo plataformas de telemedicina, criando um ecossistema de saúde conectado e eficiente.
 
+
+# Relatório de Testes de Software (EP3)
+1. Introdução
+Este relatório detalha os testes manuais e automatizados realizados na API de Gestão de Pacientes. O objetivo é verificar a funcionalidade das rotas de CRUD (Create, Read, Update, Delete), garantir a integridade das respostas e identificar possíveis falhas. A metodologia de testes visa validar tanto os cenários de sucesso quanto os de erro, assegurando a robustez e a confiabilidade do sistema.
 
 ## Equipe
 
