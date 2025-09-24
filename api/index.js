@@ -1,4 +1,4 @@
-// index.js (Atualizado com rotas PUT e DELETE)
+// index.js (Versão Final e Corrigida)
 
 // Importa os pacotes
 const express = require('express');
@@ -68,7 +68,7 @@ app.put('/pacientes/:id', (req, res) => {
         return res.status(400).json({ message: "Dados incompletos para atualização." });
     }
 
-    pacientes[index] = { ...pacientes[index], ...dadosAtualizados };
+    pacientes[index] = { id: id, ...dadosAtualizados }; // Correção para manter o ID
     res.status(200).json({ message: "Paciente atualizado com sucesso!", paciente: pacientes[index] });
 });
 
