@@ -68,10 +68,12 @@ app.put('/pacientes/:id', (req, res) => {
         return res.status(400).json({ message: "Dados incompletos para atualização." });
     }
 
-    pacientes[index] = { id: id, ...dadosAtualizados }; // Correção para manter o ID
+    // A LINHA CORRETA É ESTA:
+    // Ela preserva o ID original e atualiza o resto com os dados novos.
+    pacientes[index] = { id: id, ...dadosAtualizados };
+
     res.status(200).json({ message: "Paciente atualizado com sucesso!", paciente: pacientes[index] });
 });
-
 // ROTA 5: Deletar um paciente (DELETE /pacientes/:id)
 app.delete('/pacientes/:id', (req, res) => {
     const id = parseInt(req.params.id);
