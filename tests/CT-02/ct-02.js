@@ -1,7 +1,8 @@
-pm.test("Status code é 200", function () {
-    pm.response.to.have.status(200);
+pm.test("Status da resposta é 400 Bad Request", function () {
+    pm.response.to.have.status(400);
 });
-pm.test("O ID do paciente retornado é 1", function () {
-    var jsonData = pm.response.json();
-    pm.expect(jsonData.id).to.eql(1);
+
+pm.test("A resposta contém a mensagem de erro correta", function () {
+    const responseData = pm.response.json();
+    pm.expect(responseData.message).to.include("Dados incompletos");
 });
