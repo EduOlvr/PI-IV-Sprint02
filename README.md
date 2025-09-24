@@ -65,7 +65,7 @@ Os casos de teste manuais foram implementados como testes automatizados utilizan
 #### Como Executar os Testes
 
 1. **Inicie a API:** Siga as "Instruções de Execução" da seção anterior para deixar o servidor rodando.
-2. **Importe a Coleção no Postman:** Baixe o arquivo `API_Pacientes.postman_collection.json` deste repositório e importe-o no Postman (`File > Import...`).
+2. **Importe a Coleção no Postman:** Baixe o arquivo `Testes da API da Clínica.postman_collection.json` deste repositório e importe-o no Postman (`File > Import...`).
 3. **Abra o Collection Runner:** Na barra lateral, clique nos três pontinhos (`...`) ao lado da coleção importada e selecione **"Run collection"**.
 4. **Execute os Testes:** Clique no botão azul **"Run API Pacientes"** para executar todos os testes automatizados de uma vez.
 
